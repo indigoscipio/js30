@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap");
+
+body {
+  font-size: 16px;
+  font-family: "Rubik", sans-serif;
+  background-color: antiquewhite;
+  color: white;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  font-size: 1em;
+  position: absolute;
+  z-index: 1;
+  transform: translateX(-50%);
+  top: 24px;
+  left: 50%;
+}
+
+footer {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 24px;
+}
+
+h2 {
+  font-size: 3em;
+}
+
+h3 {
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.panel-1 {
+  background-color: rgb(70, 114, 12);
+}
+
+.panel-2 {
+  background-color: rgb(18, 159, 194);
+}
+
+.panel-3 {
+  background-color: rgb(194, 89, 18);
+}
+
+.panel-4 {
+  background-color: rgb(194, 18, 150);
+}
+
+.panel-5 {
+  background-color: rgb(124, 18, 194);
+}
+
+.panel-6 {
+  background-color: rgb(194, 18, 42);
+}
+
+.panel {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  transition: flex 0.5s ease-in-out, font-size 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+.panel > * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+  margin: 0;
+  flex: 1;
+}
+
+.panel > *:first-child {
+  transform: translateY(-100%);
+}
+
+.panel > *:last-child {
+  transform: translateY(100%);
+}
+
+.panel.textslide > *:first-child {
+  transform: translateY(0);
+}
+
+.panel.textslide > *:last-child {
+  transform: translateY(0);
+}
+
+.panel:hover {
+  opacity: 0.8;
+}
+
+.active {
+  flex: 6;
+  font-size: 4em;
+}
